@@ -3,7 +3,7 @@
 using namespace std;
 int main(){
 priority_queue<int> pq;  //by default max heap
-priority_queue<int, vector<int>, greater<int> > pqm;  //by default max heap
+priority_queue<int, vector<int>, greater<int> > pqm;  // min heap
 pq.push(10);
 pq.push(50);
 pq.push(20);

@@ -2,7 +2,7 @@
 #include<vector>
 using namespace std;
 
-int find(vector<int> &parent ,int a){
+int find(vector<int> &parent ,int a){   //this method return which cluster or group x belongs to 
     if(parent[a]==a) return a;
     return parent[a] = find(parent, parent[a]);
 }

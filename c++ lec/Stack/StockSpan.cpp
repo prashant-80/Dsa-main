@@ -41,3 +41,28 @@ int main(){
     }
     cout<<endl;
 }
+
+
+//direct approach 
+
+vector<int> calculateSpan(vector<int>& arr) {
+
+    int n = arr.size();
+    stack<int> st;
+    vector<int> ans;
+    
+    for(int i=0;i<arr.size();i++){
+            while(!st.empty() && arr[st.top()] <= arr[i]){
+                st.pop();
+            } ///for previous greates element 
+            if(st.empty()){
+                ans.push_back(i+1);   //if empty means it spans from start
+            }else{  //or from that inx to current i
+                int idx = st.top();
+                int count = i - idx;
+                ans.push_back(count);
+            }
+        st.push(i);
+    }
+    return ans;
+}

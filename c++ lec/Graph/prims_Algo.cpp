@@ -1,3 +1,5 @@
+//MST -> Minimum spanning tree
+
 #include<iostream>
 #include<vector>
 #include<queue>
@@ -36,7 +38,7 @@ ll prims(int src, int n){
             continue;
         }
         vis.insert(curr.second);
-        ans += curr.first;
+        ans += curr.first;   //min weight 
         total_count++;
         pq.pop();
         for(auto neighbour:graph[curr.second]){

@@ -16,7 +16,7 @@ int main(){
         //pop
         while(st.size()>0 && st.top()<=arr[i]) st.pop();
 
-        //ams
+        //ans
 
         if(st.size()==0) pge[i] = -1;
         else pge[i] = st.top();
